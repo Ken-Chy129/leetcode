@@ -14,7 +14,7 @@ public class 二分查找704 {
     }
     
     public int bisection(int[] nums, int left, int right, int target) {
-        if (left > right) {
+        if (left > right) { // 左指针已经位于右指针右边，表示查询不到结果
             return -1;
         }
         int mid = (left + right) / 2;
