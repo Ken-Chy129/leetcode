@@ -7,7 +7,7 @@ package leetcode.数组;
  */
 
 // @lc code=start
-class Solution {
+public class 两数之和1 {
     // 暴力遍历数组，二重循环，O(n^2)
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
