@@ -21,14 +21,15 @@ public class 在排序数组中查找元素的第一个和最后一个位置34 {
         }
         int mid = (right - left) / 2 + left;
         if (nums[mid] == target) {
-            if (result[0] == -1) {
+            if (result[0] == -1) { // 第一次找到相同的值，则对两个位置全赋值
                 result[0] = mid;
                 result[1] = mid;
-            } else if (mid < result[0]) {
+            } else if (mid < result[0]) { // 不是第一次找到而且找到的位置比之前找到的左边界还要小，则扩展左边界
                 result[0] = mid;
-            } else if(mid > result[1]) {
+            } else if(mid > result[1]) { // 不是第一次找到而且找到的位置比之前的右边界还要大，则扩展右边界
                 result[1] = mid;
             }
+            // 找到一个值后需要向左右两处继续查询是否还有其他相等情况以扩充边界
             bisection(nums, mid+1, right, target, result);
             bisection(nums, left, mid-1, target, result);
         } else if (nums[mid] < target) {
