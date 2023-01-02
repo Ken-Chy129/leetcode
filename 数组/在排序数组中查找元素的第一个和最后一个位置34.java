@@ -58,7 +58,7 @@ public class 在排序数组中查找元素的第一个和最后一个位置34 {
                 left = mid + 1;
             else {
                 res = mid;
-                //处理target == nums[mid]
+                // 当前查询的是左边界
                 if(leftOrRight)
                     right = mid - 1;
                 else
