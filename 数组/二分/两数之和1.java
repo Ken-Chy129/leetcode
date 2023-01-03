@@ -1,4 +1,4 @@
-package leetcode.数组;
+package leetcode.数组.二分;
 
 /*
  * @lc app=leetcode.cn id=1 lang=java

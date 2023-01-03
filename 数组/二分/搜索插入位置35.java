@@ -1,4 +1,4 @@
-package leetcode.数组;
+package leetcode.数组.二分;
 
 /**
  * <pre>
