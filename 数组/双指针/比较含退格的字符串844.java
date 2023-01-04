@@ -1,4 +1,4 @@
-package leetcode.数组.元素的移动;
+package leetcode.数组.双指针;
 
 /**
  * <pre>
