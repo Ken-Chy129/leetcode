@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * <pre>
- *
+ * 递归：从后往前依次取出前缀遍历数组的值，以其作为分割点，不断将中序数组分割为右左子树
  * </pre>
  *
  * @author <a href="https://github.com/Ken-Chy129">Ken-Chy129</a>
@@ -44,7 +44,7 @@ public class 从中序与后序遍历序列构造二叉树106 {
 
         // 下标减一
         post_idx--;
-        // 构造右子树
+        // 先构造右子树，因为从后取后序遍历数组的值，去完根节点后接着最开始取到的就是最右边的节点
         root.right = build(index + 1, in_right);
         // 构造左子树
         root.left = build(in_left, index - 1);

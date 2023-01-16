@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * <pre>
- *
+ * 递归：从前往后依次取出前缀遍历数组的值，以其作为分割点，不断将中序数组分割为左右子树
  * </pre>
  *
  * @author <a href="https://github.com/Ken-Chy129">Ken-Chy129</a>
