@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * <pre>
- *
+ * 一个物品最多只能取一次
  * </pre>
  *
  * @author <a href="https://github.com/Ken-Chy129">Ken-Chy129</a>

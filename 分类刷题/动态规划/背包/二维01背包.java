@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * <pre>
- *
+ * 两种开销限制
  * </pre>
  *
  * @author <a href="https://github.com/Ken-Chy129">Ken-Chy129</a>
