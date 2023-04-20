@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.美的;
 
 
 public class Solution {
