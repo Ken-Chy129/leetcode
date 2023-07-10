@@ -2,9 +2,6 @@ package leetcode.暑假修行.链表;
 
 import leetcode.codetop.ListNode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * <pre>
  *
