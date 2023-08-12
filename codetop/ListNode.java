@@ -9,9 +9,9 @@ package leetcode.codetop;
  * @since 2023/4/9 16:15
  */
 public class ListNode {
-    int val;
+    public int val;
     
-    ListNode next;
+    public ListNode next;
     
-    ListNode(int x) { val = x; }
+    public ListNode(int x) { val = x; }
 }
