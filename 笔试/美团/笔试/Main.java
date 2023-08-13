@@ -1,4 +1,4 @@
-package leetcode.美团.笔试;
+package leetcode.笔试.美团.笔试;
 
 import java.util.*;
 

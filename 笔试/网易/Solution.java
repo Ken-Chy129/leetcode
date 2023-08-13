@@ -1,4 +1,4 @@
-package leetcode.网易;
+package leetcode.笔试.网易;
 
 /**
  * <pre>

@@ -1,4 +1,4 @@
-package leetcode.携程;
+package leetcode.笔试.携程;
 
 import java.util.ArrayList;
 import java.util.Scanner;

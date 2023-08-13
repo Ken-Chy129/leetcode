@@ -1,4 +1,4 @@
-package leetcode.华为;
+package leetcode.笔试.华为;
 
 import java.util.Random;
 import java.util.Scanner;
