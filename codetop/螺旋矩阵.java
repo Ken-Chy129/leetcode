@@ -30,7 +30,7 @@ public class 螺旋矩阵 {
             for (int col = right - 1; col >= left; col--) {
                 res.add(matrix[bottom][col]);
             }
-            for (int row = bottom; row > top; row--) {
+            for (int row = bottom - 1; row > top; row--) {
                 res.add(matrix[row][left]);
             }
             left++;
