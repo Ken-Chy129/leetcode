@@ -19,7 +19,7 @@ public class 除自身以外数组的乘积 {
             prefix[i] = prefix[i - 1] * nums[i - 1];
         }
         for (int i = nums.length - 2; i >= 0; i--) {
-            suffix[i] = suffix[i + 1] * nums[i+1];
+            suffix[i] = suffix[i + 1] * nums[i + 1];
         }
         int[] res = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
