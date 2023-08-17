@@ -28,8 +28,8 @@ public class 从中序与后序遍历序列构造二叉树 {
         }
         TreeNode root = new TreeNode(postorder[index]);
         int key = map.get(postorder[index]);
-        root.right = partition(postorder, map, index - 1, key + 1, right);
         root.left = partition(postorder, map, index - right + key - 1, left, key - 1);
+        root.right = partition(postorder, map, index - 1, key + 1, right);
         return root;
     }
 }
