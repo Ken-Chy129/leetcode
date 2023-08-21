@@ -13,14 +13,14 @@ import leetcode.codetop.ListNode;
 public class 两两交换链表中的节点 {
 
     public ListNode swapPairs(ListNode head) {
-        ListNode dummy = new ListNode(0), pre = dummy;
+        ListNode dummy = new ListNode(0), p = dummy;
         dummy.next = head;
-        while (pre.next != null && pre.next.next != null) {
-            ListNode first = pre.next, second = pre.next.next;
+        while (p.next != null && p.next.next != null) {
+            ListNode first = p.next, second = p.next.next;
             first.next = second.next;
             second.next = first;
-            pre.next = second;
-            pre = first;
+            p.next = second;
+            p = first;
         }
         return dummy.next;
     }
