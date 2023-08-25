@@ -53,10 +53,10 @@ public class 数组中的第K个最大元素 {
         swap(nums, left, randomIndex);
         int key = nums[left], i = left + 1, j = right;
         while (true) {
-            while (i <= j && nums[i++] < key) {
+            while (i <= j && nums[i] < key) {
                 i++;
             }
-            while (i <= j && nums[j++] > key) {
+            while (i <= j && nums[j] > key) {
                 j--;
             }
             if (i >= j) {
