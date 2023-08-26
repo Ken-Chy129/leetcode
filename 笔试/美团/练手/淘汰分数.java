@@ -1,4 +1,4 @@
-package leetcode.笔试.美团;
+package leetcode.笔试.美团.练手;
 
 import java.util.Arrays;
 import java.util.Scanner;
