@@ -17,24 +17,18 @@ public class LRU缓存 {
 class LRUCache {
 
     static class LRUNode {
-        LRUNode prev;
-        LRUNode next;
-        int val;
-        int key;
+        LRUNode prev, next;
+        int val, key;
 
-        public LRUNode() {
-        }
+        public LRUNode() {}
 
         public LRUNode(int key, int val) {
             this.key = key;
             this.val = val;
         }
     }
-    
     HashMap<Integer, LRUNode> map;
-    
     LRUNode first, tail;
-    
     int capacity;
     
     public LRUCache(int capacity) {
