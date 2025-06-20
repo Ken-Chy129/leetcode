@@ -9,11 +9,15 @@ import java.util.Map;
  */
 public class LRUCache {
 
-    static class Node {
-        int key;
-        int value;
-        Node next;
-        Node prev;
+    private static class Node {
+
+        private int key;
+
+        private int value;
+
+        private Node prev;
+
+        private Node next;
 
         public Node(int key, int value) {
             this.key = key;
@@ -30,11 +34,10 @@ public class LRUCache {
     private final Node tail;
 
     public LRUCache(int capacity) {
-        assert capacity > 0;
         this.capacity = capacity;
-        cache = new HashMap<>(capacity);
-        head = new Node(-1, -1);
-        tail = new Node(-1, -1);
+        this.cache = new HashMap<>(capacity);
+        this.head = new Node(0, 0);
+        this.tail = new Node(0, 0);
         head.next = tail;
         tail.prev = head;
     }
@@ -54,19 +57,13 @@ public class LRUCache {
             node.value = value;
             moveToHead(node);
         } else {
-            Node node = new Node(key, value);
             if (cache.size() >= capacity) {
-                Node eliminate = eliminate();
-                cache.remove(eliminate.key);
+                eliminate();
             }
+            Node node = new Node(key, value);
             addToHead(node);
             cache.put(key, node);
         }
-    }
-
-    private void moveToHead(Node node) {
-        removeNode(node);
-        addToHead(node);
     }
 
     private void addToHead(Node node) {
@@ -76,14 +73,19 @@ public class LRUCache {
         node.prev = head;
     }
 
+    private void moveToHead(Node node) {
+        removeNode(node);
+        addToHead(node);
+    }
+
     private void removeNode(Node node) {
         node.prev.next = node.next;
         node.next.prev = node.prev;
     }
 
-    private Node eliminate() {
+    private void eliminate() {
         Node toBeEliminated = tail.prev;
         removeNode(toBeEliminated);
-        return toBeEliminated;
+        cache.remove(toBeEliminated.key);
     }
 }
