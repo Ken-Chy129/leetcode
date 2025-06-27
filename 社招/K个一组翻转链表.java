@@ -19,7 +19,7 @@ public class K个一组翻转链表 {
                 break;
             }
             // 反转前的第一个节点，反转后的最后一个节点
-            ListNode orignalHead = head;
+            ListNode originalHead = head;
             // 上一轮反转后的最后一个节点指向这一轮反转后的第一个节点
             prev.next = end;
             do {
@@ -29,9 +29,9 @@ public class K个一组翻转链表 {
                 head = next;
             } while (prev != end);
             // 反转后的最后一个节点与下一组节点连接上
-            orignalHead.next = head;
-            prev = orignalHead;
-            end = orignalHead;
+            originalHead.next = head;
+            prev = originalHead;
+            end = originalHead;
         }
         return dummy.next;
     }
